@@ -15,6 +15,7 @@ const NewUserForm = () => {
         isSuccess,
         isError,
         error
+
     }] = useAddNewUserMutation()
 
     const navigate = useNavigate()
@@ -52,6 +53,8 @@ const NewUserForm = () => {
         )
         setRoles(values)
     }
+    
+    // const canSave = [roles.length || validUsername || validPassword || !isLoading]
 
     const canSave = [roles.length, validUsername, validPassword].every(Boolean) && !isLoading
 
@@ -95,6 +98,7 @@ const NewUserForm = () => {
                         </button>
                     </div>
                 </div>
+
                 <label className="form__label" htmlFor="username">
                     Username: <span className="nowrap">[3-20 letters]</span></label>
                 <input
