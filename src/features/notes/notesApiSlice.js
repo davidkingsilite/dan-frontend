@@ -25,7 +25,7 @@ export const notesApiSlice = apiSlice.injectEndpoints({
                    return notesAdapter.setAll(initialState, loadedNotes)
             },
             providesTags: (result , error, arg) => {
-                if(!result?.ids){
+                if(result?.ids){
                     return [
                     {type: 'Note', id: 'LIST' },
                     ...result.ids.map(id => ({ type:'Note', id}))

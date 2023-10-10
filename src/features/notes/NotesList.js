@@ -11,7 +11,7 @@ const NotesList = () => {
     isSuccess,
     isError,
     error
-   } = useGetNotesQuery(undefined, {
+   } = useGetNotesQuery('noteslist', {
     pollingInterval: 15000,
     refetchOnFocus: true,
     refetchOnMountOrArgChange: true
