@@ -19,7 +19,7 @@ const USERS_REGEX = /^\/dash\/users(\/)?$/
 
 const DashHeader = () => {
 
-    const { isManager, isAdmin} = useAuth
+    const { isManager, isAdmin} = useAuth()
 
     const navigate = useNavigate()
     const { pathname } = useLocation()
